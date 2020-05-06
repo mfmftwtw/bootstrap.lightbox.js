@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="favicon.png">
+	<title>Lightbox - Bootstrap</title>
+	<script src="js/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/highlight.bootstrap.min.css">
+	<script src="js/highlight.min.js"></script>
+	<script src="../src/js/bootstrap.lightbox.js"></script>
+	<style>
+		body
+		{
+			color: #212529;
+			text-align: left;
+			line-height: 1.5;
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+			font-size: 1rem;
+			font-weight: 400;
+		}
+		h1,h2,h3,h4,h5,h6
+		{
+			line-height: 1.2;
+			font-weight: 500;
+		}
+		.bd-title
+		{
+			margin-top: 1rem;
+			margin-bottom: .5rem;
+			font-size: 3rem;
+			font-weight: 300;
+		}
+		.bd-lead
+		{
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+		.bd-content > h2:not(:first-child)
+		{
+			margin-top: 3rem;
+		}
+		.bd-content > h3
+		{
+			margin-top: 1.5rem;
+		}
+		.bd-navbar
+		{
+			min-height: 4rem;
+			background-color: #563d7c;
+			box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+		}
+		.btn-bd-github
+		{
+			border-color: #ffe484;
+			color: #ffe484;
+			font-weight: 600;
+		}
+		.btn-bd-github:hover
+		{
+			background-color: #ffe484;
+			border-color: #ffe484;
+			color: #2a2730;
+		}
+		.highlight
+		{
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			padding: 1.5rem;
+			background-color: #f8f9fa;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+		}
+		.highlight pre
+		{
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 0;
+			background-color: transparent;
+			border: 0;
+		}
+	</style>
+</head>
+	<body>
+		<header class="navbar navbar-expand navbar-dark flex-row bd-navbar">
+			<a class="btn btn-bd-github" href="https://github.com/mfmftwtw/bootstrap.lightbox.js">GitHub</a>
+		</header>
+		<div class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-md-2 col-xl-2"></div>
+				<main class="col-md-8 col-xl-8 bd-content" role="main">
+					<h1 class="bd-title">Lightbox</h1>
+					<p class="bd-lead">A lightweight(1.7kb minified) lightbox plugin based on the bootstrap modal plugin.</p>
+					<h2>Quick Start</h2>
+					<h3>Include Bootstrap</h3>
+					<p>Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN. Using a package manager or need to download the source files? Head to the <a href="https://getbootstrap.com/docs/4.4/getting-started/download/">downloads page</a>.</p>
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html">&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"&gt;
+&lt;script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+					</figure>
+					<h3>Include bootstrap.lightbox.js</h3>
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html">&lt;script src="js/bootstrap.lightbox.min.js"&gt;&lt;/script&gt;</code></pre>
+					</figure>
+					<h2>Examples</h2>
+					<h3>Live demo</h3>
+					<p>
+						Toggle a working lightbox demo by clicking the button below.
+					</p>
+					<p>
+						<button type="button" class="btn btn-primary" data-toggle="lightbox" data-title="test" data-href="data:image/gif;base64,R0lGODlhAAIAAsQAAFY9fP///7evxIx/o93Z42VQhqKYtO7t8ff2+HNhkMrF1IBwmubj6tTP262kvcG6zJeMrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjY5NzFENzRCNTA4RkVBMTE5NDc2REREM0Q4REE4ODEzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRCOEI3MkNCOEY2ODExRUFBRkNBQTJFOTg1NjUxOUEzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRCOEI3MkNBOEY2ODExRUFBRkNBQTJFOTg1NjUxOUEzIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Njk3MUQ3NEI1MDhGRUExMTk0NzZEREQzRDhEQTg4MTMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Njk3MUQ3NEI1MDhGRUExMTk0NzZEREQzRDhE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
+">Launch demo lightbox</button>
+					</p>
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html">&lt;button type="button" data-toggle="lightbox" data-href="[URL]"&gt;Launch demo lightbox&lt;/button&gt;</code></pre>
+					</figure>
+					<h3>Hide Header and Footer</h3>
+					<p>
+						<button type="button" class="btn btn-primary" data-toggle="lightbox" data-header="hide" data-footer="hide" data-href="data:image/gif;base64,R0lGODlhAAIAAsQAAFY9fP///7evxIx/o93Z42VQhqKYtO7t8ff2+HNhkMrF1IBwmubj6tTP262kvcG6zJeMrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjY5NzFENzRCNTA4RkVBMTE5NDc2REREM0Q4REE4ODEzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRCOEI3MkNCOEY2ODExRUFBRkNBQTJFOTg1NjUxOUEzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRCOEI3MkNBOEY2ODExRUFBRkNBQTJFOTg1NjUxOUEzIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Njk3MUQ3NEI1MDhGRUExMTk0NzZEREQzRDhEQTg4MTMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Njk3MUQ3NEI1MDhGRUExMTk0NzZEREQzRDhE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
+">Launch demo lightbox</button>
+					</p>
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html">&lt;button type="button" data-toggle="lightbox" data-header="hide" data-footer="hide" data-href="[URL]"&gt;Launch demo lightbox&lt;/button&gt;</code></pre>
+					</figure>
+					<h2>Documentation</h2>
+					<p>
+						Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.
+					</p>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<th width="20%">Name</th>
+								<th width="20%">Default</th>
+								<th width="60%">Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>backdrop</td>
+								<td><code>true</code></td>
+								<td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click or on escape key press.</td>
+							</tr>
+							<tr>
+								<td>keyboard</td>
+								<td><code>true</code></td>
+								<td>Closes the modal when escape key is pressed.</td>
+							</tr>
+							<tr>
+								<td>focus</td>
+								<td><code>true</code></td>
+								<td>Puts the focus on the modal when initialized.</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Advanced settings</h3>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<th width="20%">Name</th>
+								<th width="20%">Default</th>
+								<th width="60%">Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td scope="row">target</td>
+								<td><code>'#myLightbox'</code></td>
+								<td>The attribute accepts a CSS selector to apply the collapse to. Be sure to add the class collapse to the collapsible element.</td>
+							</tr>
+							<tr>
+								<td scope="row">animate</td>
+								<td><code>'fade'</code></td>
+								<td>Open and close animation type. Can be set to <code>false</code> or <code>'fade'</code>.</td>
+							</tr>
+							<tr>
+								<td scope="row">size</td>
+								<td><code>false</code></td>
+								<td>Lightbox have three optional sizes. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports. Can be set to <code>false</code>, <code>'sm'</code>,<code>'lg'</code> or <code>'xs'</code>.</td>
+							</tr>
+							<tr>
+								<td scope="row">header</td>
+								<td><code>'show'</code></td>
+								<td>If set to <code>'hide'</code>, it'll hide lightbox header. Can be set to <code>'show'</code> or <code>'hide'</code>.</td>
+							</tr>
+							<tr>
+								<td scope="row">footer</td>
+								<td><code>'show'</code></td>
+								<td>If set to <code>'hide'</code>, it'll hide lightbox footer. Can be set to <code>'show'</code> or <code>'hide'</code>.</td>
+							</tr>
+							<tr>
+								<td scope="row">center</td>
+								<td><code>true</code></td>
+								<td>Vertically center the Modal.</td>
+							</tr>
+							<tr>
+								<td scope="row">title</td>
+								<td></td>
+								<td>Add captions to lightbox.</td>
+							</tr>
+						</tbody>
+					</table>
+				</main>
+			</div>
+		</div>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</body>
+</html>
