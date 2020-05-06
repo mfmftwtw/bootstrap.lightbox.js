@@ -38,8 +38,8 @@ A lightweight(1.7kb minified) lightbox plugin based on the bootstrap modal plugi
 | target            | `'#myLightbox'`    | The attribute accepts a CSS selector to apply the collapse to. Be sure to add the class collapse to the collapsible element.                                                         |
 | animate           | `'fade'`           | Open and close animation type. Can be set to `false` or `'fade'`.                                                                                                                    |
 | size              | `false`            | Lightbox have three optional sizes. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports. Can be set to `false`, `'sm'`,`'lg'` or `'xs'`. |
-| header            | `'show'`           | If set to `'hide'`, it'll hide lightbox header. Can be set to `'show" or `'hide'`.                                                                                                   |
-| footer            | `'show'`           | If set to `'hide'`, It'll hide lightbox footer. Can be set to `'show" or `'hide'`.                                                                                                   |
+| header            | `'show'`           | If set to `'hide'`, it'll hide lightbox header. Can be set to `'show'` or `'hide'`.                                                                                                   |
+| footer            | `'show'`           | If set to `'hide'`, It'll hide lightbox footer. Can be set to `'show'` or `'hide'`.                                                                                                   |
 | center            | `true`             | Vertically center the Modal.                                                                                                                                                         |
 | title             |                    | Add captions to lightbox.                                                                                                                                                            |
 
